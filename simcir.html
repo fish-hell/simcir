@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="simcir.js"></script>
+   <link rel="stylesheet" type="text/css" href="simcir.css">
+   <script type="text/javascript" src="simcir-basicset.js"></script>
+   <link rel="stylesheet" type="text/css" href="simcir-basicset.css">
+   <script type="text/javascript" src="simcir-library.js"></script>
+   <script type="text/javascript" src="simcir-dso.js"></script>
+   <script type="text/javascript" src="simcir-num.js"></script>
+   <script type="text/javascript" src="simcir-transmitter.js"></script>
+   <script type="text/javascript" src="simcir-delay.js"></script>
+   <script type="text/javascript" src="simcir-altfulladder.js"></script>
+   <title>SimcirJS-電気回路シュミレーター</title>
+  </head>
+<body>
+    <div class="simcir" id="simcir">
+{
+  "width":800,
+  "height":600,
+  "toolbox":[
+  {"type":"In"},
+  {"type":"Out"},
+  {"type":"Joint"},
+  {"type":"DC"},
+  {"type":"LED","label":"LED(白)","color":"#ffffff"},
+  {"type":"LED","label":"LED(赤)"},
+  {"type":"LED","label":"LED(橙)","color":"#ff7700"},
+  {"type":"LED","label":"LED(黄)","color":"#ffff00"},
+  {"type":"LED","label":"LED(緑)","color":"#00ff00"},
+  {"type":"LED","label":"LED(水)","color":"#00ffff"},
+  {"type":"LED","label":"LED(青)","color":"#0000ff"},
+  {"type":"LED","label":"LED(紫)","color":"#aa00ff"},
+  {"type":"LED","label":"LED(桃)","color":"#ff77aa"},
+  {"type":"PushOff"},
+  {"type":"PushOn"},
+  {"type":"Toggle"},
+  {"type":"BUF"},
+  {"type":"NOT"},
+  {"type":"AND"},
+  {"type":"AND","numInputs":"3","label":"AND(3in)"},
+  {"type":"AND","numInputs":"4","label":"AND(4in)"},
+  {"type":"AND","numInputs":"5","label":"AND(5in)"},
+  {"type":"AND","numInputs":"6","label":"AND(6in)"},
+  {"type":"NAND"},
+  {"type":"NAND","numInputs":"3","label":"NAND(3in)"},
+  {"type":"OR"},
+  {"type":"OR","numInputs":"3","label":"OR(3in)"},
+  {"type":"OR","numInputs":"4","label":"OR(4in)"},
+  {"type":"OR","numInputs":"5","label":"OR(5in)"},
+  {"type":"OR","numInputs":"6","label":"OR(6in)"},
+  {"type":"NOR"},
+  {"type":"XOR"},
+  {"type":"XOR","numInputs":"3","label":"XOR(3in)"},
+  {"type":"XNOR"},
+  {"type":"OSC","label":"OSC(0.1Hz)","freq":"0.1"},
+  {"type":"OSC","label":"OSC(0.2Hz)","freq":"0.2"},
+  {"type":"OSC","label":"OSC(0.5Hz)","freq":"0.5"},
+  {"type":"OSC","label":"OSC(1Hz)","freq":"1"},
+  {"type":"OSC","label":"OSC(2Hz)","freq":"2"},
+  {"type":"OSC","label":"OSC(5Hz)","freq":"5"},
+  {"type":"OSC","label":"OSC(10Hz)"},
+  {"type":"7seg"},
+  {"type":"16seg"},
+  {"type":"4bit7seg"},
+  {"type":"RotaryEncoder"},
+  {"type":"BusIn"},
+  {"type":"BusOut"},
+  {"type":"BusIn","numOutputs":"4","label":"BusIn4"},
+  {"type":"BusOut","numInputs":"4","label":"BusOut4"},
+
+  {"type":"JK-FF"},
+  {"type":"T-FF"},
+  {"type":"D-FF"},
+  {"type":"8bitCounter"},
+  {"type":"HalfAdder"},
+  {"type":"FullAdder"},
+  {"type":"4bitAdder"},
+  {"type":"2to4BinaryDecoder"},
+  {"type":"3to8BinaryDecoder"},
+  {"type":"4to16BinaryDecoder"},
+  {"type":"AltFullAdder"},
+  {"type":"Transmitter"},
+  {"type":"Delay"},
+  {"type":"NumSrc"},
+  {"type":"NumDsp"},
+  {"type":"DSO"},
+  {"type":"DSO","numInputs":"6","label":"DSO(6in)"},
+  {"type":"DSO","numInputs":"8","label":"DSO(8in)"}
+  ]
+}
+    </div>
+    <!--   {"type":"SR-Latch"},
+           {"type":"SR-FF"},       -->
+
+<!--<p>保存するには、回路をCtrl+クリック(Command+クリック)して、保存ボタンを押してください。<br>
+   回路に戻すには再度Ctrl+クリックしてください。</p>
+<button onclick="save()">保存</button>
+<button onclick="load()">読み込み</button>-->
+<p>Powerd by SimcirJS</p>
+  <!-- <script>
+  function save() {
+  let circuitCodeElement = document.getElementsByClassName('simcir-json-data-area')[0];
+   if (circuitCodeElement && circuitCodeElement.value) {
+    let circuitCode = circuitCodeElement.value;
+    localStorage.setItem('savedCircuitCode', circuitCode);
+    alert('保存しました。');
+  } else {
+    alert('保存できませんでした。テキストで表示されているか確認してください。');
+  }
+}
+  function load() {
+    const circuitCodeElement = document.getElementById('simcir');
+     circuitCodeElement.innerHTML = localStorage.getItem('savedCircuitCode');
+  }
+  </script> -->
+  </body>
+</html>
